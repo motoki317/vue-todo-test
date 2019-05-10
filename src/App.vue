@@ -1,17 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <counter/>
+    <timer/>
+    <item-list/>
+    <todo-list/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Counter from "./Counter.vue";
+import Timer from "./Timer.vue";
+import ItemList from "./ItemList.vue";
+import TodoList from "./TodoList.vue";
 
 export default {
   name: "app",
+  props: {
+    msg: String
+  },
   components: {
-    HelloWorld
+    Counter,
+    Timer,
+    ItemList,
+    TodoList
   }
 };
 </script>
