@@ -15,7 +15,7 @@
       </label>
       <label for>
         価格
-        <input type="text" v-model="newItemPrice" />
+        <input type="number" v-model="newItemPrice" />
       </label>
       <button @click="addItem">追加</button>
     </p>
@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       newItemName: "",
-      newItemPrice: "",
+      newItemPrice: 0,
       items: [
         { name: "たまご", price: 100 },
         { name: "りんご", price: 160 },
