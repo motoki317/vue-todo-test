@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <counter/>
-    <timer/>
-    <item-list/>
-    <todo-list/>
+    <counter />
+    <timer />
+    <item-list />
+    <todo-list />
   </div>
 </template>
 

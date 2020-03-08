@@ -4,9 +4,15 @@
     <p>10秒で止めるやつ</p>
     <div>{{ timerMessage }}</div>
     <div>
-      <button v-bind:disabled="state !== 0" @click="timerStart()">スタート</button>
-      <button v-bind:disabled="state !== 1" @click="timerStop()">ストップ</button>
-      <button v-bind:disabled="state !== 2" @click="timerReset()">リセット</button>
+      <button v-bind:disabled="state !== 0" @click="timerStart()">
+        スタート
+      </button>
+      <button v-bind:disabled="state !== 1" @click="timerStop()">
+        ストップ
+      </button>
+      <button v-bind:disabled="state !== 2" @click="timerReset()">
+        リセット
+      </button>
     </div>
   </div>
 </template>
@@ -28,7 +34,7 @@ export default {
       this.state = 1;
     },
     timerStop: function() {
-      var millis = Date.now() - this.date;
+      const millis = Date.now() - this.date;
       this.timerMessage = millis / 1000 + " s " + this.getMessage(millis);
       this.state = 2;
     },
@@ -50,4 +56,3 @@ export default {
   }
 };
 </script>
-
